@@ -18,6 +18,14 @@
 1. Numbered
 2. List
 
+
+<!-- Globe Widget 插件 -->
+<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=_3aUeKp1Ud1RRxKs5fKrS2j6uXsW0NUAwNyoeWfYnOw"></script>
+
+
+
+
+
 **Bold** and _Italic_ and `Code` text
 
 [Link](url) and ![Image](src)
