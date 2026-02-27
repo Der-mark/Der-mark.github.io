@@ -30,11 +30,9 @@
   <main class="container">
     <section class="hero">
       <div>
-        <h1>Embodied AI</h1>
+        <h1>Qianwei Han</h1>
         <p class="lead">
           我做 <b>下一代人机交互</b> 与 <b>有身体的AI</b> 相关的工程与研究。
-          欢迎访问我的主页：）。它是AI生成的。
-          这里是我的论文与联系方式。
         </p>
 
         <div class="cta">
@@ -49,9 +47,20 @@
           <span>🧠 Embodied AI</span>
         </div>
       </div>
-
       <div class="card photoCard">
-        <img src="assets/me.png" class="photo" />
+        <div class="flip-card" id="avatarFlip" aria-label="Avatar flip card" tabindex="0">
+          <div class="flip-inner">
+            <!-- Front: 现在的AI头像 -->
+            <div class="flip-face flip-front">
+              <img src="assets/me.png"  class="photo" />
+            </div>
+      
+            <!-- Back: 你的真人照片 -->
+            <div class="flip-face flip-back">
+              <img src="assets/humanme.jpg"  class="photo" />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
