@@ -2,12 +2,209 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mark</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mark · Personal Homepage</title>
+  <meta name="description" content="Robotics × Multimodal AI · Projects, publications, and notes." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mark · Personal Homepage" />
+  <meta property="og:description" content="Robotics × Multimodal AI · Projects, publications, and notes." />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="assets/style.css" />
+  <script defer src="assets/main.js"></script>
 </head>
-<body style="font-family: system-ui; padding: 40px;">
-  <h1>Mark</h1>
-  <p>Robotics × Multimodal AI</p>
-  <p><a href="https://github.com/Der-mark">GitHub</a></p>
+
+<body>
+  <header class="top">
+    <a class="brand" href="#top" id="top">Mark</a>
+
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#pubs">Publications</a>
+      <a href="#exp">Experience</a>
+      <a href="#contact">Contact</a>
+      <button class="theme" id="themeBtn" aria-label="Toggle theme" title="Toggle theme">◐</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Robotics × Multimodal AI</h1>
+        <p class="lead">
+          我做 <b>灵巧操作 / 强化学习</b> 与 <b>多模态内容生成</b> 相关的工程与研究。
+          这里是我的项目、论文与联系方式。
+        </p>
+
+        <div class="cta">
+          <a class="btn primary" href="#projects">看项目</a>
+          <a class="btn" href="#contact">联系我</a>
+          <a class="btn" href="https://github.com/Dear-Mark" target="_blank" rel="noreferrer">GitHub</a>
+          <!-- 你也可以放：Google Scholar / CV.pdf / Blog 链接 -->
+        </div>
+
+        <div class="meta">
+          <span>📍 Beijing / London</span>
+          <span>·</span>
+          <span>🧠 Embodied AI</span>
+          <span>·</span>
+          <span>⚡ Efficient DL</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Now</h3>
+        <ul class="list">
+          <li>做一个“能交付结果”的 Agent / 内容生成系统</li>
+          <li>灵巧手 sim2real：鲁棒控制、数据闭环、真机评测</li>
+          <li>关注：低延迟推理、长序列建模、对齐与蒸馏</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About</h2>
+      <div class="grid2">
+        <div class="card">
+          <h3>Bio</h3>
+          <p>
+            （这里写 3~5 句自我介绍：你是谁、做什么、最擅长什么、最近在做什么。）
+          </p>
+          <p class="muted">
+            关键词建议：Dexterous Manipulation / RL / Sim2Real / Multimodal / Agent Systems / Infra
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Highlights</h3>
+          <ul class="list">
+            <li>✅ 强化学习训练与部署：Isaac Gym / ROS / Franka / 灵巧手</li>
+            <li>✅ 多模态与推荐：兴趣建模、蒸馏、对比学习、冷启动</li>
+            <li>✅ 工程化：性能-延迟权衡、系统集成、可复现训练</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+
+      <div class="cards">
+        <article class="card">
+          <div class="cardHead">
+            <h3>Project A · Dexterous Tracking</h3>
+            <span class="tag">Robotics</span>
+          </div>
+          <p class="muted">一句话讲清：问题 → 你的方法 → 结果（量化指标/演示链接）。</p>
+          <div class="links">
+            <a href="#" target="_blank" rel="noreferrer">Paper</a>
+            <a href="#" target="_blank" rel="noreferrer">Code</a>
+            <a href="#" target="_blank" rel="noreferrer">Video</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="cardHead">
+            <h3>Project B · AI Content Agent</h3>
+            <span class="tag">Product</span>
+          </div>
+          <p class="muted">比如：输入商品图 → 自动拆卖点 → 生成视频 → A/B 组合与投放。</p>
+          <div class="links">
+            <a href="#" target="_blank" rel="noreferrer">Demo</a>
+            <a href="#" target="_blank" rel="noreferrer">Deck</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="cardHead">
+            <h3>Project C · Efficient Inference</h3>
+            <span class="tag">Systems</span>
+          </div>
+          <p class="muted">比如：蒸馏/剪枝/量化/缓存/批处理等，让延迟可控、成本可控。</p>
+          <div class="links">
+            <a href="#" target="_blank" rel="noreferrer">Notes</a>
+          </div>
+        </article>
+      </div>
+
+      <p class="hint">提示：项目越少越好（3~6 个），但每个都要“可点开+有证据”。</p>
+    </section>
+
+    <section id="pubs" class="section">
+      <h2>Publications</h2>
+      <div class="card">
+        <ul class="pubs">
+          <li>
+            <b>Paper Title</b> · Venue, Year
+            <div class="muted">Author1, <u>You</u>, Author3</div>
+            <div class="links">
+              <a href="#" target="_blank" rel="noreferrer">PDF</a>
+              <a href="#" target="_blank" rel="noreferrer">ArXiv</a>
+              <a href="#" target="_blank" rel="noreferrer">Code</a>
+            </div>
+          </li>
+          <li>
+            <b>Paper Title</b> · Venue, Year
+            <div class="muted">Author1, <u>You</u>, Author3</div>
+            <div class="links">
+              <a href="#" target="_blank" rel="noreferrer">PDF</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="exp" class="section">
+      <h2>Experience</h2>
+      <div class="card">
+        <div class="timeline">
+          <div class="titem">
+            <div class="when">2024–Now</div>
+            <div>
+              <div class="what"><b>Kuaishou</b> · Recommendation / Multimodal</div>
+              <div class="muted">做了哪些业务指标/系统落地/关键技术点（3条以内）。</div>
+            </div>
+          </div>
+          <div class="titem">
+            <div class="when">2023–2024</div>
+            <div>
+              <div class="what"><b>Tsinghua</b> · Speech / Compression</div>
+              <div class="muted">剪枝/蒸馏/加速：指标与收益一句话写清。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="grid2">
+        <div class="card">
+          <h3>Links</h3>
+          <ul class="list">
+            <li>GitHub：<a href="https://github.com/Dear-Mark" target="_blank" rel="noreferrer">github.com/Dear-Mark</a></li>
+            <li>Email：<a href="mailto:you@example.com">you@example.com</a></li>
+            <li>Scholar：<a href="#" target="_blank" rel="noreferrer">Google Scholar</a></li>
+            <li>CV：<a href="assets/CV.pdf" target="_blank" rel="noreferrer">Download</a>（可选）</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Message</h3>
+          <p class="muted">
+            你可以写一句“我对哪些合作/岗位/方向开放”，以及你希望对方怎么联系你。
+          </p>
+          <p class="muted">比如：Embodied AI / Robotics / Multimodal Systems / Agent Productization</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> Mark</span>
+      <span class="muted">· Built with plain HTML/CSS on GitHub Pages</span>
+    </footer>
+  </main>
 </body>
 </html>
