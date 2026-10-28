@@ -11,7 +11,7 @@
   <meta property="og:description" content="Embodied AI · publications, and blogs." />
   <meta property="og:type" content="website" />
 
-  <link rel="icon" type="image/png" href="assets/me.png?v=2" />
+  <link rel="icon" type="image/png" href="assets/favicon-head.png?v=3" />
   <link rel="apple-touch-icon" href="assets/me.png" />
   <link rel="stylesheet" href="assets/style.css" />
   <script defer src="assets/main.js"></script>
@@ -94,7 +94,7 @@
         <ul class="pubs">
           <li class="pub-row">
             <div class="pub-preview">
-              <video controls playsinline preload="none" poster="assets/videos/adadextrack.jpg" aria-label="adadextrack research demonstration">
+              <video autoplay muted loop controls playsinline preload="none" poster="assets/videos/adadextrack.jpg" aria-label="adadextrack research demonstration">
                 <source src="assets/videos/adadextrack.mp4" type="video/mp4" />
                 Your browser does not support video. <a href="assets/videos/adadextrack.mp4">Download video</a>
               </video>
@@ -113,7 +113,7 @@
           </li>
           <li class="pub-row">
             <div class="pub-preview">
-              <video controls playsinline preload="none" poster="assets/videos/vitas.jpg" aria-label="vitas research demonstration">
+              <video autoplay muted loop controls playsinline preload="none" poster="assets/videos/vitas.jpg" aria-label="vitas research demonstration">
                 <source src="assets/videos/vitas.mp4" type="video/mp4" />
                 Your browser does not support video. <a href="assets/videos/vitas.mp4">Download video</a>
               </video>
@@ -132,7 +132,7 @@
           </li>
           <li class="pub-row">
             <div class="pub-preview">
-              <video controls playsinline preload="none" poster="assets/videos/dextrack.jpg" aria-label="dextrack research demonstration">
+              <video autoplay muted loop controls playsinline preload="none" poster="assets/videos/dextrack.jpg" aria-label="dextrack research demonstration">
                 <source src="assets/videos/dextrack.mp4" type="video/mp4" />
                 Your browser does not support video. <a href="assets/videos/dextrack.mp4">Download video</a>
               </video>
@@ -182,6 +182,33 @@
       <span class="muted">· Built with plain HTML/CSS on GitHub Pages</span>
     </footer>
   </main>
+
+  <script>
+  (() => {
+    const videos = [...document.querySelectorAll('#pubs video')];
+    const visible = new Set();
+    const sync = video => {
+      video.muted = true;
+      if (visible.has(video) && !document.hidden) {
+        const play = video.play();
+        if (play) play.catch(() => {});
+      } else video.pause();
+    };
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) visible.add(entry.target);
+          else visible.delete(entry.target);
+          sync(entry.target);
+        });
+      }, { threshold: 0.15 });
+      videos.forEach(video => { video.autoplay = false; video.muted = true; observer.observe(video); });
+    } else {
+      videos.forEach(video => { visible.add(video); sync(video); });
+    }
+    document.addEventListener('visibilitychange', () => videos.forEach(sync));
+  })();
+  </script>
 </body>
 </html>
 

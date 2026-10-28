@@ -1,0 +1,2 @@
+Created using the built-in image generation/editing tool.
+Prompt: Extract the existing gorilla head, skull, sunglasses and cigar from the supplied avatar screenshot. Preserve identity and colors; remove website UI, scenery, borders, jacket and necklace. Fill the square with the head silhouette on a transparent background, with no text or badge, for favicon legibility.
