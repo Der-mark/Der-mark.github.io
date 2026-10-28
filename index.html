@@ -11,16 +11,18 @@
   <meta property="og:description" content="Embodied AI · publications, and blogs." />
   <meta property="og:type" content="website" />
 
+  <link rel="icon" type="image/png" href="assets/me.png?v=2" />
+  <link rel="apple-touch-icon" href="assets/me.png" />
   <link rel="stylesheet" href="assets/style.css" />
   <script defer src="assets/main.js"></script>
 
   <style>
     #pubs .pubs { list-style: none; padding: 0; margin: 0; }
-    #pubs .pub-row { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 24px; align-items: center; margin: 0; padding: 24px 0; border-bottom: 1px solid var(--line); }
+    #pubs .pub-row { display: grid; grid-template-columns: minmax(240px, 32%) minmax(0, 1fr); gap: 24px; align-items: center; margin: 0; padding: 24px 0; border-bottom: 1px solid var(--line); }
     #pubs .pub-row:first-child { padding-top: 0; }
     #pubs .pub-row:last-child { border-bottom: 0; padding-bottom: 8px; }
     .pub-preview { display: block; position: relative; border-radius: 12px; overflow: hidden; background: #fff; border: 1px solid var(--line); text-decoration: none; }
-    .pub-preview img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; color: #222; }
+    .pub-preview video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; background: #080b10; }
     .pub-preview-label { display: block; background: #18212f; color: #eef4ff; padding: 8px 12px; font-size: 12px; font-weight: 600; }
     .pub-preview:hover .pub-preview-label { background: #29466c; }
     .pub-preview:focus-visible { outline: 3px solid #83b4ff; outline-offset: 4px; }
@@ -91,10 +93,12 @@
       <div class="card">
         <ul class="pubs">
           <li class="pub-row">
-            <a class="pub-preview" href="https://janebek.github.io/AdaDexTrack/" target="_blank" rel="noopener noreferrer">
-              <img src="https://janebek.github.io/AdaDexTrack/static/method.jpg" alt="AdaDexTrack method overview" loading="lazy" decoding="async" width="640" height="360" />
-              <span class="pub-preview-label">Explore project ↗</span>
-            </a>
+            <div class="pub-preview">
+              <video controls playsinline preload="none" poster="assets/videos/adadextrack.jpg" aria-label="adadextrack research demonstration">
+                <source src="assets/videos/adadextrack.mp4" type="video/mp4" />
+                Your browser does not support video. <a href="assets/videos/adadextrack.mp4">Download video</a>
+              </video>
+            </div>
             <div class="pub-details">
             <b>AdaDexTrack: Dynamic Modulation for Adaptive and Generalizable Dexterous Manipulation Tracking</b> · CVPR 2026
             <div class="muted">Jianibieke Adalibieke*, <strong>Qianwei Han*</strong>, Xueyi Liu, Yuzhe Qin, Li Yi</div>
@@ -108,10 +112,12 @@
             </div>
           </li>
           <li class="pub-row">
-            <a class="pub-preview" href="https://skyrainwind.github.io/ViTaS/index.html" target="_blank" rel="noopener noreferrer">
-              <img src="https://skyrainwind.github.io/ViTaS/static/images/2-realworld_setting.png" alt="ViTaS real-world robot experiment setup" loading="lazy" decoding="async" width="640" height="360" />
-              <span class="pub-preview-label">Real-world experiments ↗</span>
-            </a>
+            <div class="pub-preview">
+              <video controls playsinline preload="none" poster="assets/videos/vitas.jpg" aria-label="vitas research demonstration">
+                <source src="assets/videos/vitas.mp4" type="video/mp4" />
+                Your browser does not support video. <a href="assets/videos/vitas.mp4">Download video</a>
+              </video>
+            </div>
             <div class="pub-details">
             <b>ViTaS: Visual Tactile Soft Fusion Contrastive Learning for Visuomotor Learning</b> · ICRA 2026 · Oral
             <div class="muted">Yufeng Tian*, Shuiqi Cheng*, Tianming Wei, Tianxing Zhou, Yuanhang Zhang, Zixian Liu, <strong>Qianwei Han</strong>, Zhecheng Yuan, Huazhe Xu</div>
@@ -125,10 +131,12 @@
             </div>
           </li>
           <li class="pub-row">
-            <a class="pub-preview" href="https://www.youtube.com/watch?v=zru1Z-DaiWE" target="_blank" rel="noopener noreferrer">
-              <img src="https://i.ytimg.com/vi/zru1Z-DaiWE/hqdefault.jpg" alt="DexTrack manipulation video preview" loading="lazy" decoding="async" width="640" height="360" />
-              <span class="pub-preview-label">▶ Watch video</span>
-            </a>
+            <div class="pub-preview">
+              <video controls playsinline preload="none" poster="assets/videos/dextrack.jpg" aria-label="dextrack research demonstration">
+                <source src="assets/videos/dextrack.mp4" type="video/mp4" />
+                Your browser does not support video. <a href="assets/videos/dextrack.mp4">Download video</a>
+              </video>
+            </div>
             <div class="pub-details">
             <b>DexTrack: Towards Generalizable Neural Tracking Control for Dexterous Manipulation from Human References</b> · ICLR 2025
             <div class="muted">Xueyi Liu, Jianibieke Adalibieke, <strong>Qianwei Han</strong>, Yuzhe Qin, Li Yi</div>
@@ -176,5 +184,6 @@
   </main>
 </body>
 </html>
+
 
 
