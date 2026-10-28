@@ -13,6 +13,25 @@
 
   <link rel="stylesheet" href="assets/style.css" />
   <script defer src="assets/main.js"></script>
+
+  <style>
+    #pubs .pubs { list-style: none; padding: 0; margin: 0; }
+    #pubs .pub-row { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 24px; align-items: center; margin: 0; padding: 24px 0; border-bottom: 1px solid var(--line); }
+    #pubs .pub-row:first-child { padding-top: 0; }
+    #pubs .pub-row:last-child { border-bottom: 0; padding-bottom: 8px; }
+    .pub-preview { display: block; position: relative; border-radius: 12px; overflow: hidden; background: #fff; border: 1px solid var(--line); text-decoration: none; }
+    .pub-preview img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; color: #222; }
+    .pub-preview-label { display: block; background: #18212f; color: #eef4ff; padding: 8px 12px; font-size: 12px; font-weight: 600; }
+    .pub-preview:hover .pub-preview-label { background: #29466c; }
+    .pub-preview:focus-visible { outline: 3px solid #83b4ff; outline-offset: 4px; }
+    .pub-details { min-width: 0; line-height: 1.55; overflow-wrap: anywhere; }
+    .pub-details .muted { margin-top: 8px; font-size: .92em; }
+    .pub-details .links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 12px; }
+    @media (max-width: 680px) {
+      #pubs .pub-row { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+      .pub-preview { width: 100%; max-width: 400px; }
+    }
+  </style>
 </head>
 
 <body>
@@ -71,7 +90,12 @@
       <h2>Publications</h2>
       <div class="card">
         <ul class="pubs">
-          <li>
+          <li class="pub-row">
+            <a class="pub-preview" href="https://janebek.github.io/AdaDexTrack/" target="_blank" rel="noopener noreferrer">
+              <img src="https://janebek.github.io/AdaDexTrack/static/method.jpg" alt="AdaDexTrack method overview" loading="lazy" decoding="async" width="640" height="360" />
+              <span class="pub-preview-label">Explore project ↗</span>
+            </a>
+            <div class="pub-details">
             <b>AdaDexTrack: Dynamic Modulation for Adaptive and Generalizable Dexterous Manipulation Tracking</b> · CVPR 2026
             <div class="muted">Jianibieke Adalibieke*, <strong>Qianwei Han*</strong>, Xueyi Liu, Yuzhe Qin, Li Yi</div>
             <div class="links">
@@ -80,8 +104,15 @@
               <a href="https://janebek.github.io/AdaDexTrack/" target="_blank" rel="noopener noreferrer">Project</a>
               <a href="https://github.com/Janebek/AdaDexTrack" target="_blank" rel="noopener noreferrer">Code</a>
             </div>
+          
+            </div>
           </li>
-          <li>
+          <li class="pub-row">
+            <a class="pub-preview" href="https://skyrainwind.github.io/ViTaS/index.html" target="_blank" rel="noopener noreferrer">
+              <img src="https://skyrainwind.github.io/ViTaS/static/images/2-realworld_setting.png" alt="ViTaS real-world robot experiment setup" loading="lazy" decoding="async" width="640" height="360" />
+              <span class="pub-preview-label">Real-world experiments ↗</span>
+            </a>
+            <div class="pub-details">
             <b>ViTaS: Visual Tactile Soft Fusion Contrastive Learning for Visuomotor Learning</b> · ICRA 2026 · Oral
             <div class="muted">Yufeng Tian*, Shuiqi Cheng*, Tianming Wei, Tianxing Zhou, Yuanhang Zhang, Zixian Liu, <strong>Qianwei Han</strong>, Zhecheng Yuan, Huazhe Xu</div>
             <div class="links">
@@ -90,8 +121,15 @@
               <a href="https://skyrainwind.github.io/ViTaS/index.html" target="_blank" rel="noopener noreferrer">Project</a>
               <a href="https://github.com/SkyRainWind/ViTaS" target="_blank" rel="noopener noreferrer">Code</a>
             </div>
+          
+            </div>
           </li>
-          <li>
+          <li class="pub-row">
+            <a class="pub-preview" href="https://www.youtube.com/watch?v=zru1Z-DaiWE" target="_blank" rel="noopener noreferrer">
+              <img src="https://i.ytimg.com/vi/zru1Z-DaiWE/hqdefault.jpg" alt="DexTrack manipulation video preview" loading="lazy" decoding="async" width="640" height="360" />
+              <span class="pub-preview-label">▶ Watch video</span>
+            </a>
+            <div class="pub-details">
             <b>DexTrack: Towards Generalizable Neural Tracking Control for Dexterous Manipulation from Human References</b> · ICLR 2025
             <div class="muted">Xueyi Liu, Jianibieke Adalibieke, <strong>Qianwei Han</strong>, Yuzhe Qin, Li Yi</div>
             <div class="links">
@@ -99,6 +137,8 @@
               <a href="https://arxiv.org/abs/2502.09614" target="_blank" rel="noopener noreferrer">arXiv</a>
               <a href="https://meowuu7.github.io/DexTrack/" target="_blank" rel="noopener noreferrer">Project</a>
               <a href="https://github.com/Meowuu7/DexTrack" target="_blank" rel="noopener noreferrer">Code</a>
+            </div>
+          
             </div>
           </li>
         </ul>
@@ -136,4 +176,5 @@
   </main>
 </body>
 </html>
+
 
